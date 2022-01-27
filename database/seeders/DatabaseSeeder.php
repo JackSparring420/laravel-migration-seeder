@@ -1,8 +1,8 @@
 <?php
 
-namespace Database\Seeders;
-
 use Illuminate\Database\Seeder;
+use Database\Seeders\SongSeeder;
+use App\Models\Song;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +13,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $this->call([
+            SongSeeder::class,
+        //     // AlbumSeeder::class,
+        //     // ArtistSeeder::class
+            
+        ]);
+        // Song::factory(10)->create();
     }
 }
